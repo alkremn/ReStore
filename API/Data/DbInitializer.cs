@@ -210,11 +210,7 @@ namespace API.Data
                 },
             };
 
-            foreach (var product in products)
-            {
-                context.Products.Add(product);
-            }
-
+            context.Products.AddRange(products);
             context.SaveChanges();
         }
     }
