@@ -12,10 +12,7 @@ export default function Catalog() {
   }
 
   useEffect(() => {
-    axios
-      .get('http://localhost:5000/api/products')
-      .then(res => res.data)
-      .then(data => setProducts(data));
+    axios.get('http://localhost:5000/api/products').then(response => setProducts(response.data));
   }, []);
 
   return (
